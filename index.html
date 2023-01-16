@@ -6,13 +6,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ndzo Daniel - Personal potfolio</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>        
         <div id = "header">
             <div class = "container">
                 <nav>
-                   <img src = "./images/logo.png" class = "logo"/>
+                   <div>
+                    <h1 class = "logo"><span style = "color: #ff004f">N</span>dzo</h1></div>
                    <ul>
                        <li><a href = "#">Home</a></li>
                        <li><a href = "#">About</a></li>
@@ -28,6 +29,7 @@
             </div>
         </div>
 
+        <!--About us-->
         <div id = "about">
             <div class = "container">
                 <div class = "row">
@@ -35,10 +37,58 @@
                         <img src = "./images/user.png"/>
                     </div>
                     <div class = "about-col-2">
-                        <h1>About me</h1>
+                        <h1 class = "sub-title">About me</h1>
+                        <p>Ndzo is a passionate software engineer with 3+ years of experience in application development. He specializes in developing robust web and mobile app solutions that are tailored to the needs of customers while focusing on scalability and performance. He has skills and knowledge in most aspects of software engineering including requirements analysis, database management and user interface design. Ndzo also possesses advanced knowledge of programming languages such as JavaScript, Java and Python. He has a profound interest in new technologies and approaches to the development of projects. As a team member, Ndzo excels at adapting to challenging situations while motivating others to strive for excellence.</p>
+
+                        <div class = "tab-titles">
+                            <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                            <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
+                            <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                        </div>
+
+                        <div class = "tab-contents active-tab" id = "skills">
+                            <ul>
+                                <li><span>UI/UX</span><br> Design web/app interfaces</li>
+                                <li><span>Web development</span><br> Web app development</li>
+                                <li><span>App development</span><br>Building Android apps</li>
+                            </ul>
+                        </div>  
+                        <div class = "tab-contents"  id = "experience">
+                            <ul>
+                                <li><span>2021 - Current</span><br> UI/UX design training at ET institute</li>
+                                <li><span>2019 - 2021</span><br> Team Lead at LLC</li>
+                                <li><span>2016</span><br>UI/UX design Executive at Coin Digital Ltd</li>
+                                <li><span>2016 - 2017</span><br>Internship at ekark ecommerce</li>
+                            </ul>
+                        </div>  
+                        <div class = "tab-contents" id = "education">
+                            <ul>
+                                <li><span>2016</span><br>UI/UX design Training at ET Institute</li>
+                                <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                                <li><span>2014</span><br>BBA from ISM Bangalore.</li>
+                            </ul>
+                        </div>    
                     </div>
                 </div>
             </div>          
         </div>
+
+        <script>
+            
+
+            var tablinks = document.getElementsByClassName("tab-links")
+            var tabcontents = document.getElementsByClassName("tab-contents")
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+            }
+        
+        </script>
     </body>
 </html>
