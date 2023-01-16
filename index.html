@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ndzo Daniel - Personal potfolio</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>        
         <div id = "header">
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <!--About us-->
+        <!-- About us-->
         <div id = "about">
             <div class = "container">
                 <div class = "row">
@@ -73,6 +73,9 @@
             </div>          
         </div>
 
+        <!-- Services-->
+
+
         <script>
             
 
@@ -87,6 +90,9 @@
                 for(tabcontent of tabcontents) {
                     tabcontent.classList.remove("active-tab");
                 }
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
             }
         
         </script>
