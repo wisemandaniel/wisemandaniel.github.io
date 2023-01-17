@@ -15,13 +15,15 @@
                 <nav>
                    <div>
                     <h1 class = "logo"><span style = "color: #ff004f">N</span>dzo</h1></div>
-                   <ul>
-                       <li><a href = "#">Home</a></li>
-                       <li><a href = "#">About</a></li>
-                       <li><a href = "#">Services</a></li>
-                       <li><a href = "#">Potfolio</a></li>
-                       <li><a href = "#">Contact</a></li>
+                   <ul id = "sidemenu">
+                       <li><a href = "#header">Home</a></li>
+                       <li><a href = "#about">About</a></li>
+                       <li><a href = "#services">Services</a></li>
+                       <li><a href = "#portfolio">Potfolio</a></li>
+                       <li><a href = "#contact">Contact</a></li>
+                       <i class="material-icons" onclick = "closemenu()">close</i>
                    </ul>
+                   <i class="material-icons" onclick = "openmenu()">menu</i>
                 </nav>
                 <div class = "header-text">
                     <p>Web and Mobile app developer</p>
@@ -177,8 +179,6 @@
     </div>
 
         <script>
-            
-
             var tablinks = document.getElementsByClassName("tab-links")
             var tabcontents = document.getElementsByClassName("tab-contents")
 
@@ -193,6 +193,19 @@
 
                 event.currentTarget.classList.add("active-link");
                 document.getElementById(tabname).classList.add("active-tab")
+            }
+        
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu")
+
+            function openmenu(tabname) {
+                sidemenu.style.right = "0";
+            }
+
+            function closemenu(tabname) {
+                sidemenu.style.right = "-200px";
             }
         
         </script>
