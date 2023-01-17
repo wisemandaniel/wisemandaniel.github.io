@@ -13,7 +13,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url("./images/background.png");
+    background-image: url("./images/large.png");
     background-size: cover;
     background-position: center;
 }
@@ -374,7 +374,7 @@ nav .material-icons {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url();
+        background-image: url("./images/small.png");
     }
     .header-text {
         margin-top: 100%;
