@@ -322,9 +322,18 @@ margin-bottom: 20px;
     transition: transform 0.5s;
 }
 
+.social-icons img {
+    width: 25px;
+    height: 25px;
+}
+
 .social-icons a:hover {
     color: #ff004f;
     transform: translateY(-5px);
+}
+
+.social-icons img:hover {
+    background: #ff004f;
 }
 
 
